@@ -1,0 +1,43 @@
+gds2{7
+m=2021-09-10 12:21:03 a=2021-09-10 12:21:03
+lib 'unnamed' 0.001 1e-09
+# first line needs to stay as is (read by other tools)
+# Key: <required> [optional]
+# File format:
+# gds2{<ver>
+# m=<modificationTimeStamp> a=<acessTimeStamp>
+# lib '<libName>' <userUnits> <dataUnits>
+# <cellDefine>
+# }
+# - - - - -
+# cellDefine is one of more of:
+# cell {c=<creationTimeStamp> m=<modificationTimeStamp> '<cellName>'
+# <cellStuff>
+# }
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+## <cellStuff>
+# cellStuff is one or more of:
+# boundary:
+# b{<layer> [dt<dataType>] xy(<xyList>)}
+#
+# path:
+# p{<layer> [dt<dataType>] [pt<pathType>] [w<real>] [bx<real>] [ex<real>] xy(<xyList>)}
+#
+# text:
+# t{<layer> [tt<textType>] [f<fontType>] [<textJust>] [pt<pathType>] [fx] [w<real>] [m<magification>] [a<angle>] xy(<xyList>) <'text'> }
+#
+# sref:
+# s{<'cellName'> [fx] [a<angle>] xy(<xyList>)}
+#
+# aref:
+# a{<'cellName'> [fx] [a<angle>] cr(<columns> <rows>) xy(<xyList>)}
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# <textJust> two letter combination of bmt (bottom,middle,top) and rcl (right,center,left) e.g. bl (default is tl)
+#
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# # as first character on a line is a comment
+cell{c=2021-09-10 12:21:03 m=2021-09-10 12:21:03 'shapes'
+b{1 xy(0.4 -0.26 0.4 -0.35 0.33 -0.31 0.36 -0.44 0.51 -0.44 0.43 -0.27)}
+1 xy(0.02 -0.22 0.2 -0.22 0.2 -0.38 0.02 -0.38 0.02 -0.22)}
+}
+}
