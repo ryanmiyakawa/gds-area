@@ -1,4 +1,4 @@
-function area = readGDStoText(fname)
+function area = computeDrawnGDSArea(fname)
 
 bPatch = true;
 
@@ -12,11 +12,13 @@ end
 gdtfname = fullfile(d, [p '.gdt']);
 
 % Write gds to file
+fprintf('Writing GDT file: %s\n', gdtfname);
 [~, out] = system(sprintf('./gds2gdt.Darwin %s %s', fname, gdtfname));
 
 
 
 % Now parse gdt file:
+fprintf('Parsing GDT...\n');
 
 fid = fopen(gdtfname);
 
