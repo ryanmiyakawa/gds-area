@@ -1,3 +1,6 @@
+% Computes the area of an arbitrary non-intersecting polygon using the
+% shoelace algorithm
+
 function area = shoelaceArea(coords)
 
 % Duplicate first coordinate

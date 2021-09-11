@@ -1,1 +1,0 @@
-addpath(genpath('gdsii-toolbox'));
