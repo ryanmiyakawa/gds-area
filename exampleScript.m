@@ -3,8 +3,10 @@
 %% Computing area from a GDS file:
 
 gdsPath = 'test2.gds';
+structureName = 'main';
 
-[computedArea, unit] = computeDrawnGDSArea(gdsPath);
+
+[computedArea, unit] = computeDrawnGDSArea(gdsPath, structureName);
 
 switch unit
     case 1e-06
